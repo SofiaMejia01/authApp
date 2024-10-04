@@ -6,6 +6,7 @@ import { User } from '../interfaces/user.interface';
 import { AuthStatus } from '../interfaces/auth-status.enum';
 import { LoginResponse } from '../interfaces/login-response.interface';
 import { CheckTokenResponse } from '../interfaces/check-token.response';
+import { UserRegister } from '../interfaces/register.interface';
 
 @Injectable({
   //global
@@ -75,7 +76,18 @@ export class AuthService {
    }
 
    //--------------------------------------------------------
+   registro(name:string, apellido:string, email:string, password:string):Observable<UserRegister>{ 
+    const url = `${ this.baseUrl}/auth/register`;
+    const body = {name, apellido, email, password};
 
+    return this.http.post<UserRegister>(url, body)
+    
+      .pipe(
+        catchError( err => throwError( () => err.error.message))
+      )
+    
+   }
+  //--------------------------------------------------------
    checkAuthStatus(): Observable<boolean> {
     const url = `${this.baseUrl}/auth/check-token`;
     const token = localStorage.getItem('token');
