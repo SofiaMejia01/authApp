@@ -150,12 +150,20 @@ button:hover {
   background-size: cover;
 }
 
-.wrap-login100 {
+.wrap-login100-2 {
   width: 500px;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
 }
+
+.wrap-login100 {
+  width: 900px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 
 
 /*------------------------------------------------------------------
@@ -285,7 +293,7 @@ button:hover {
 }
 
 .wrap-login100-form-btn {
-  width: 100%;
+  width: 400px;
   display: block;
   position: relative;
   z-index: 1;
@@ -407,7 +415,7 @@ button:hover {
 .p-t-57 {padding-top: 57px;}
 .p-t-58 {padding-top: 58px;}
 .p-t-59 {padding-top: 59px;}
-.p-t-60 {padding-top: 60px;}
+.p-t-60 {padding-top: 30px;}
 .p-t-61 {padding-top: 61px;}
 .p-t-62 {padding-top: 62px;}
 .p-t-63 {padding-top: 63px;}
